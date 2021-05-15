@@ -4,4 +4,8 @@ class InvoicesController < ApplicationController
     @invoices = Invoice.all
   end
 
+  def show 
+    @invoice = Invoice.find_by(params[:id])
+  end 
+
 end
